@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About dbs
-category: temp
 ---
 
 안녕하세요.
