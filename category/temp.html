@@ -1,0 +1,11 @@
+<!-- /category/temp.html -->
+---
+layout: page
+title: 카테고리 temp
+---
+temp에 포함된 글들:
+<ul>
+	{% for post in site.categories.temp %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
