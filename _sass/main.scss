@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:900');
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -227,6 +228,7 @@ article {
   max-width: 500px;
   margin: 0 auto;
   h1.title {
+    font-family: 'Noto Serif KR', sans-serif; /* 12-05-2018 포스트의 제목(title)의 글꼴 수정, 김정윤 */
     line-height: 1.4em;
     text-align: center;
     font-size: 1.4em;
