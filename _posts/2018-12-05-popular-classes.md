@@ -4,11 +4,9 @@ updated: 2018-12-05 18:00
 category: Java
 ---
 
-**요약:** StringBuffer, StringBuilder, StringTokenizer, Math, Date, Calendar
+**요약:** StringBuffer, StringBuilder, StringTokenizer, Math, Date, Calendar 의 사용법
 
 ## StringBuffer, StringBuilder
-
-### 사용법 )
 
 #### 1.생성
 ```java
