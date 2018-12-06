@@ -10,7 +10,7 @@ category: Java
 
 ### 사용법 )
 
-### 1.생성
+#### 1.생성
 ```java
 StringBuffer sb = new StringBuffer();
 ```
