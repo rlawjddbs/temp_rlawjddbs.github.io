@@ -6,9 +6,16 @@ category: Java
 
 **요약:** StringBuffer, StringBuilder, StringTokenizer, Math, Date, Calendar
 
-### StringBuffer, StringBuilder
+## StringBuffer, StringBuilder
 
-#### 사용법 )
+### 사용법 )
+
+### 1.생성
+```java
+StringBuffer sb = new StringBuffer();
+```
+
+2. 값을 덧붙임
 
 This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
 
