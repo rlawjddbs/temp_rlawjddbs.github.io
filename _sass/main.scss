@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:900');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300');
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -411,4 +412,8 @@ section {
 /* 12_06_2018 추가 rlawjddbs*/
 .post-date.code.float_right{
   float:right;
+}
+span.korean_span{
+  font-family:Consolas, monaco, 'Noto Sans KR', sans-serif;
+  color:#757575;
 }
