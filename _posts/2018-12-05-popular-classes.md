@@ -14,8 +14,13 @@ category: Java
 ```java
 StringBuffer sb = new StringBuffer();
 ```
-
-2. 값을 덧붙임
+#### 2.값을 덧붙임
+```java
+sb.append(10);
+sb.append(12.5);
+sb.append('A');
+sb.append("안녕").append("12월").append(5);
+```
 
 This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
 
