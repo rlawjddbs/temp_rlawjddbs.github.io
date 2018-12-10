@@ -20,8 +20,11 @@ sb.append('A');
 sb.append("안녕").append("12월").append(5);
 ```
 
-![SBF_SBD](http://rlawjddbs.github.io/_posts/imgs/1205/StringBuffer.gif)
+![stringbuffer](https://user-images.githubusercontent.com/36517195/49706085-d1b58c80-fc66-11e8-9156-cd73e5ec0854.gif)
 
 This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
 
 **Less is more..**
+
+        
+      
