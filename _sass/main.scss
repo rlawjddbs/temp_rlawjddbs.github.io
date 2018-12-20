@@ -157,7 +157,8 @@ iframe {
 }
 ul,
 ol {
-  margin: 40px 0;
+    /******* 2018-12-20-목 상하 외부여백 수정(40px -> 20px) 작성자 : 김정윤 *******/
+  margin: 20px 0;
   padding-left: 50px;
   li {
     word-wrap: break-word;
