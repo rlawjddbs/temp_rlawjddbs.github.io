@@ -8,6 +8,7 @@ category: Oracle
 
 <div class="divider"></div>
 
+### DBMS(DataBase Management System)
 - data : 수, 문자, 이미지로 된 자료(연구, 조사의 기본 재료)
 - - Data를 체계적으로 정리한 것이 DataBase
 - Driver loading 방식[^1]

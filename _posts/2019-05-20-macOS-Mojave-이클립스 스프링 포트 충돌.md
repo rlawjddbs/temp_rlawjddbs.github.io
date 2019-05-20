@@ -1,6 +1,6 @@
 ---
-title: Lorem Ipsum
-updated: 2015-09-06 15:56
+title: macOS에서 이클립스 스프링 포트가 충돌할 때
+updated: 2019-05-20 21:52
 ---
 
 ### The standard Lorem Ipsum passage, used since the 1500s
