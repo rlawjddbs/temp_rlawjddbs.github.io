@@ -5,7 +5,7 @@ updated: 2019-05-20 21:52
 
 ### The standard Lorem Ipsum passage, used since the 1500s
 
-![](https://github.com/rlawjddbs/rlawjddbs.github.io/blob/master/_posts/imgs/190520/404error.png)
+![](https://github.com/rlawjddbs/rlawjddbs.github.io/blob/master/assets/common/imgs/190520/404error.png)
 
 ```terminal
 sudo lsof -i : "8080"
