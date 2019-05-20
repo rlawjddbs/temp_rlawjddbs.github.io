@@ -5,7 +5,12 @@ updated: 2019-05-20 21:52
 
 ### The standard Lorem Ipsum passage, used since the 1500s
 
-![](https://github.com/rlawjddbs/rlawjddbs.github.io/blob/master/_posts/imgs/190520/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202019-05-20%20%EC%98%A4%ED%9B%84%209.54.57.png)
+![](https://github.com/rlawjddbs/rlawjddbs.github.io/blob/master/_posts/imgs/190520/404error.png)
+
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a <b>tag</b>.
+```
 
 ### Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
 
