@@ -7,9 +7,8 @@ updated: 2019-05-20 21:52
 
 ![](https://github.com/rlawjddbs/rlawjddbs.github.io/blob/master/_posts/imgs/190520/404error.png)
 
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
+```terminal
+sudo lsof -i : "8080"
 ```
 
 ### Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
