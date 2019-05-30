@@ -27,7 +27,7 @@ sudo lsof -i :"535" 를 입력하면 PID가 535인 프로세스를 Kill 할 수 
 정확한 원인을 알 수 없지만 집에서는 Tomcat WAS 서버에서 IPv6로 IP Address를 반환하는 이슈를 발견,
 따라서 톰캣 실행 시 전달되는 JVM의 환경 변수에 다음 설정 값을 추가해보았다.
 
-![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/run_configurations.png)
+<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/run_configurations.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/run_configurations.png)</a>
 
 ```terminal
 "-Djava.net.preferIPv4Stack=true"
