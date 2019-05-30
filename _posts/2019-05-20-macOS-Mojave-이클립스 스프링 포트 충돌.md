@@ -16,7 +16,7 @@ sudo lsof -i : "8080"
 같은 포트를 사용중인 프로세스들. 이클립스를 제외한 모든 프로세스의 PID를 Kill 해줘야 한다.
 
 ```terminal
-sudo lsof -i :"Kill할 프로세스 PID"
+sudo kill -9 :"Kill할 프로세스 PID"
 ```
 sudo lsof -i :"535" 를 입력하면 PID가 535인 프로세스를 Kill 할 수 있다.
 
