@@ -1,6 +1,7 @@
 ---
 title: macOS에서 Tomcat 서버가 Run on Server 되지 않는 이슈
 updated: 2019-05-20 21:52
+category: Java
 ---
 
 <a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/404error.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/404error.png)</a>
