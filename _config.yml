@@ -27,7 +27,7 @@ plugins:
 
 # disqus 댓글
 disqus_url:    https://https-rlawjddbs-github-io.disqus.com
-disqus_id:     https-rlawjddbs-github-io
+disqus_identifier:     https-rlawjddbs-github-io
 
 
 defaults:
