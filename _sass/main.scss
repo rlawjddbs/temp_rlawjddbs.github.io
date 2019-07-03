@@ -425,3 +425,8 @@ a.categories{
 a.categories:hover{
      border-bottom:1px solid #555;
 }
+// 디스커스 댓글 CSS 설정
+#disqus_thread{
+     max-width:500px;
+     margin:0 auto;
+}
