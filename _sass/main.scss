@@ -418,3 +418,10 @@ section {
   font-family:Consolas, 'Noto Sans KR', sans-serif;
   color:#757575;
 }
+/* 07_03_2019 추가 네비게이션 a 링크 태그 */
+a.categories{
+     border-bottom:none;
+}
+a.categories:hover{
+     border-bottom:1px solid #555;
+}
