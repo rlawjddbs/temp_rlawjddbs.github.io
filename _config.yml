@@ -25,7 +25,9 @@ exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "scr
 plugins:
   - jekyll-sitemap
 
-
+# disqus 댓글
+disqus_url:    zeongyun@gmail.com
+disqus_id:     https-rlawjddbs-github-io
 
 defaults:
   -
