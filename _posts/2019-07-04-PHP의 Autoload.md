@@ -7,7 +7,7 @@ category: PHP
   
 ### PHP의 클래스 작성법
 ```PHP
-**Hello.php**
+# Hello.php
 <?php
 class Hello
 {
