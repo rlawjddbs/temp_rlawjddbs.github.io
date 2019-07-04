@@ -6,7 +6,7 @@ category: PHP
 [참고 문서](https://freehoon.tistory.com/75?category=708152)
   
 ### PHP의 클래스 작성법
-```PHP
+```php
 # Hello.php
 <?php
 class Hello
