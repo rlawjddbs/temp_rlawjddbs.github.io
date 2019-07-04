@@ -410,7 +410,7 @@ section {
 }
 
 
-/* 12_06_2018 추가 rlawjddbs*/
+/* 12_06_2018 rlawjddbs*/
 .post-date.code.float_right{
   float:right;
 }
@@ -418,15 +418,20 @@ section {
   font-family:Consolas, 'Noto Sans KR', sans-serif;
   color:#757575;
 }
-/* 07_03_2019 추가 네비게이션 a 링크 태그 */
+/* 07_03_2019 네비게이션 a 링크 태그 */
 a.categories{
      border-bottom:none;
 }
 a.categories:hover{
      border-bottom:1px solid #555;
 }
-// 디스커스 댓글 CSS 설정
+/* 디스커스 댓글 CSS 설정 */
 #disqus_thread{
      max-width:500px;
      margin:0 auto;
+}
+/* 07_04_2019 카테고리 상위 노드 span.site-tag 사이 간격 조정 */
+span.site-tag{
+  padding-left:10px;
+  padding-right:10px;
 }
