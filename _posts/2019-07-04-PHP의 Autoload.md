@@ -45,6 +45,7 @@ class Task01
 
 ### index.php 수정
 ```php
+<?php
 // require_once 'Hello.php';
 // require_once 'Task01.php';
 spl_autoload_register('my_autoloader');
