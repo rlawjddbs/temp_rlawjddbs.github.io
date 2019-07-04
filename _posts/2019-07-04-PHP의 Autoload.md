@@ -17,3 +17,13 @@ class Hello
     } // say
 } // class
 ```
+
+### Hello 클래스의 인스턴스 생성 후 자원 사용
+```php
+# index.php
+<?php
+require_once 'Hello.php';
+
+$sayHello = new Hello();
+$sayHello->say();
+```
