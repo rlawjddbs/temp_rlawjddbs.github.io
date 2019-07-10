@@ -2,10 +2,8 @@
 layout: page
 title: About dbs
 ---
-<div style="text-align:center;">
-김정윤<br />
+김정윤  
 1989년생
-</div>
 
 - 2012.03 ~ 2014.09 영진 전문대 시각 디자인학과 졸업
 - 2013.07 ~ 2016.03 와우프레스 디지털 인쇄팀 편집 디자이너
