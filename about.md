@@ -3,6 +3,8 @@ layout: page
 title: About dbs
 ---
 
+<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/about/kjy.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/about/kjy.png)</a>
+
 김정윤  
 1989년생
 
