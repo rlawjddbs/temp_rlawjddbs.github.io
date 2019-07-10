@@ -3,7 +3,7 @@ title: Godomall5 parameter 처리
 updated: 2019-07-10 15:37
 category: PHP
 ---
-[참고 문서](http://doc.godomall5.godomall.com/Godomall5_Pro_Guide/Coding_Guide#page_Superglobals)
+[참고 문서](http://doc.godomall5.godomall.com/Godomall5_Pro_Guide/Coding_Guide#page_Superglobals)  
 **NOTE** : 고도몰5 솔루션의 파라미터 처리
 
 > 고도몰5 솔루션은 PHP 기반이지만 **$_GET, $_POST**와 같은 Superglobals 변수를 unset 하였으며, 각 변수의 역할을
