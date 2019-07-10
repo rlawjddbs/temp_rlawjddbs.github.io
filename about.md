@@ -2,8 +2,7 @@
 layout: page
 title: About dbs
 ---
-<div style="text-align:center;">
-김정윤<br />
+<div style="text-align:center;"><strong>김정윤</strong><br />
 1989년생
 </div>
 
