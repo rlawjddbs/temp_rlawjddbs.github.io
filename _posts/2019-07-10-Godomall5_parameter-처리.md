@@ -10,6 +10,7 @@ category: PHP
 대체하는 클래스와 함수를 제공한다.
 
 ```php
+/* 고도몰에서 대체한 전역 변수들 */
 $GLOBALS = Framework\Registry\Globals;
 $_SERVER = \Request::server();
 $_GET = \Request::get();
