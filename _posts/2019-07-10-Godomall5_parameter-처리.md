@@ -24,6 +24,6 @@ $_COOKIE = \Cookie;
 요청처리 방식이 GET이거나 POST일 경우 하기에 작성된 문법을 따른다.
 
 ```php
-$_GET = \Request::get()->get("parameter명");
-$_POST = \Request::post()->get("parameter명");
+$_GET = \Request::get()->get('parameter명');
+$_POST = \Request::post()->get('parameter명');
 ```
