@@ -6,7 +6,7 @@ title: About dbs
 1989년생
 </div>
 <p style="text-align:center;">
-    <img src="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/about/pxArt.gif" style="width:200px;" />
+    <img src="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/about/pxArt.gif" style="width:100px;" />
 </p>
 - 2012.03 ~ 2014.09 영진 전문대 시각 디자인학과 졸업
 - 2013.07 ~ 2016.03 와우프레스 디지털 인쇄팀 편집 디자이너
