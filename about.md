@@ -5,7 +5,9 @@ title: About dbs
 <div style="text-align:center;"><strong>김정윤</strong><br />
 1989년생
 </div>
-![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/about/pxArt.gif)
+<p style="text-align:center;">
+    <img src="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/about/pxArt.gif" style="width:200px;" />
+</p>
 - 2012.03 ~ 2014.09 영진 전문대 시각 디자인학과 졸업
 - 2013.07 ~ 2016.03 와우프레스 디지털 인쇄팀 편집 디자이너
 - 2017.07 ~ 2018.09 sbs 아카데미 교육부 웹 학과 강사
