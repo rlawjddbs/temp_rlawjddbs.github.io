@@ -4,6 +4,7 @@ updated: 2019-10-19 23:32
 category: javascript
 ---
 
+html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,8 @@ category: javascript
 </body>
 </html>
 ```
-
+  
+javascript
 ```javascript
 var dbs;
 
