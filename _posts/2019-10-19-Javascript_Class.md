@@ -36,7 +36,7 @@ var dbs;
 
     }
 
-    dbs = _class;
+    dbs = dbs || _class;
 })();
 ```
   
