@@ -227,7 +227,7 @@ iframe {
   width: 100%;
 }
 article {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
   h1.title {
     font-family: 'Noto Serif KR', sans-serif; /* 12-05-2018 포스트의 제목(title)의 글꼴 수정, 김정윤 */
@@ -311,7 +311,7 @@ article {
 .page-navigation,
 .footer {
   text-align: center;
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
   font-size: 0.8rem;
 }
@@ -335,7 +335,7 @@ article {
   }
 }
 section {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto 50px auto;
   ul {
     list-style: none;
@@ -427,7 +427,7 @@ a.categories:hover{
 }
 /* 디스커스 댓글 CSS 설정 */
 #disqus_thread{
-     max-width:500px;
+     max-width:800px;
      margin:0 auto;
 }
 /* 07_04_2019 카테고리 상위 노드 span.site-tag 사이 간격 조정 */
