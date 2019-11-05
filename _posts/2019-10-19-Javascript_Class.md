@@ -36,7 +36,8 @@ javascript
 
     }
 
-    window.dbs = dbs || _class;
+    window.dbs = _class || {};
+    // window.dbs = _class || new Object();
 })();
 ```
   
@@ -52,7 +53,7 @@ jQuery $.extend() 사용 시
 
     }
 
-    $.extend(window, _class);
+    $.extend(window, _class || {});
     // window.dbs = {} 으로 작성 가능
 })();
 ```
