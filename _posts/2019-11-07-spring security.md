@@ -78,6 +78,6 @@ category: Java
 
 </security:http>
 ```
-`<security:form-login>` 의 `login-page` 속성값을 설정하면 권한이 없는 url로 접근 시 자동으로 `login-page` 옵션에 설정된 url로 이동.
+`<security:form-login>` 의 `login-page` 속성값을 설정하면 로그인 하지 않은 상태에서 권한이 없는 url로 접근 시 자동으로 `login-page` 옵션에 설정된 url로 이동.
 
 
