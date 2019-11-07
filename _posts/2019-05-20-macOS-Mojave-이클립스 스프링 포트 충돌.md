@@ -4,7 +4,7 @@ updated: 2019-05-20 21:52
 category: Java
 ---
 
-<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/imgs/common/190520/404error.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/404error.png)</a>
+<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/common/190520/404error.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/404error.png)</a>
 
 
 ```terminal
@@ -12,7 +12,7 @@ sudo lsof -i : "8080"
 ```
 터미널을 실행한 후 위 코드를 입력한 뒤 비밀번호까지 입력하면 현재 8080번 포트를 사용중인 프로세스를 확인할 수 있음.
 
-<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/imgs/190520/lsof-i8080.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/lsof-i8080.png)</a>
+<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/lsof-i8080.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/lsof-i8080.png)</a>
 
 같은 포트를 사용중인 프로세스들. 이클립스를 제외한 모든 프로세스의 PID를 Kill 해줘야 한다.
 
