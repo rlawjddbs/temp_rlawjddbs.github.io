@@ -5,7 +5,7 @@ category: Java
 ---
 **NOTE** : spring-security 파헤치기 <a href="https://minwan1.github.io/2017/04/22/2017-04-22-spring-security-implement/" target="_new">(참고 문서)</a>
 
-<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/imgs/191107/dependencyMajorModule.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/191107/dependencyMajorModule.png)</a>
+<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/imgs/common/191107/dependencyMajorModule.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/191107/dependencyMajorModule.png)</a>
 
 ###### 스프링 프레임워크 주요 모듈간 의존관계
 
@@ -66,7 +66,7 @@ category: Java
 	<security:intercept-url pattern="/lib/**" access="permitAll" />
 	<security:intercept-url pattern="/**/*.js" access="permitAll" />
 	<!-- 누구나 다들어갈수 있음 -->
-	
+
 	<security:intercept-url pattern="/**" access="hasAnyRole('ROLE_SYS, ROLE_ADMIN, ROLE_USER')" />
 
 	<security:intercept-url pattern="/admin/**" access="hasAuthority('ROLE_ADMIN')"/>
