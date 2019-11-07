@@ -14,6 +14,7 @@ index.html
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="common/js/dbs.js"></script>
+    <script src="common/js/Main.js"></script>
 </head>
 <body>
     
@@ -26,35 +27,64 @@ dbs.js (super class)
 (function(){
     "use strict";
 
-    window.o2exg = {
+    window.dbs = {
         version : "1.0"
-    }
-    var _class = {
-        
-        initialize : function(){
-            alert("asdf");       
-        }
-
     }
 
     window.dbs = _class || {};
     // window.dbs = _class || new Object();
 })();
 ```
-  
-jQuery $.extend() 사용 시
+람다식 함수를 활용하여 클래스화 진행
+
+Main.js (sub class)
 ```javascript
 (function(){
     "use strict";
     var _class = {
+        _initialize : function(){
+            var _self = this;
+
+            ...
+
+        },
         
-        initialize : function(){
-            alert("asdf");       
-        }
+        getValue : function(key, defaultValue){
+            return key != undefined && key != null && key != "" ? key : defaultValue;
+        },
 
-    }
+        ...
+    } // class
 
-    $.extend(window, _class || {});
+    dbs.cmmn = dbs.cmmn || {};
+    dbs.cmmn.Main = _class;
+
+})();
+```
+
+###### jQuery $.extend() 사용 시 
+Main.js
+```javascript
+(function(){
+    "use strict";
+    var _class = {
+        _initialize : function(){
+            var _self = this;
+
+            ...
+
+        },
+        
+        getValue : function(key, defaultValue){
+            return key != undefined && key != null && key != "" ? key : defaultValue;
+        },
+
+        ...
+    } // class
+
+    dbs.cmmn = $.extend(dbs.cmmn || {}, {
+        Main : _class
+    });
     // window.dbs = {} 으로 작성 가능
 })();
 ```
