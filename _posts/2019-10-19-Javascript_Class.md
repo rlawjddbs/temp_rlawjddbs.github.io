@@ -4,7 +4,7 @@ updated: 2019-10-19 23:32
 category: javascript
 ---
 
-html
+index.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +13,7 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="common/js/ClassTest.js"></script>
-    <script type="text/javascript">
-        dbs.initialize();
-    </script>
+    <script src="common/js/dbs.js"></script>
 </head>
 <body>
     
@@ -24,10 +21,14 @@ html
 </html>
 ```
   
-javascript
+dbs.js (super class)
 ```javascript
 (function(){
     "use strict";
+
+    window.o2exg = {
+        version : "1.0"
+    }
     var _class = {
         
         initialize : function(){
