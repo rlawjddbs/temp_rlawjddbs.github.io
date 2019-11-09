@@ -3,7 +3,9 @@ layout: page
 title: 카테고리가 "temp"인 글 목록
 ---
 <!--temp에 포함된 글들:-->
+{% assign categoryNm = {{ page.url | split:'#' | first }} %}
 <section>
+	<p>{{ categoryNm }}</p>
 	<ul>
 		{% for post in site.categories.Java %}
 		<li style="list-style:disc">
