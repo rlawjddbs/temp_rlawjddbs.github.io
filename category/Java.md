@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 카테고리가 "temp"인 글 목록
+title: 카테고리가 "Java"인 글 목록
 ---
 <!--temp에 포함된 글들:-->
 <section>
