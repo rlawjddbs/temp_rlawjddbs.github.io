@@ -4,7 +4,7 @@ updated: 2019-05-20 21:52
 category: Java
 ---
 
-<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/common/190520/404error.png" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/404error.png)</a>
+<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/common/190520/404error.png" target="_new" style="border-bottom:0;">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/190520/404error.png)</a>
 
 
 ```terminal
