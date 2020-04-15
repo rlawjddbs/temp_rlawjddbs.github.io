@@ -1,0 +1,48 @@
+# Site Info
+title:              "dbs"
+description:        "A minimalist Jekyll theme"
+author_name:        "Jeong-yun Kim" # change this to your name
+logo_url:           https://avatars1.githubusercontent.com/u/36517195?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
+
+# Site Settings
+url:                https://rlawjddbs.github.io # main url
+baseurl:
+permalink:          /:title # Post permalink
+timezone:           Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+mathjax:            true  # enables support for mathjax - set to 'false' to disable
+
+# Site Build
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
+sass:
+    style:          :compressed
+
+# Other Params
+include:            [ "robots.txt" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
+plugins:
+  - jekyll-sitemap
+
+# disqus 댓글
+disqus_url:    https://https-rlawjddbs-github-io.disqus.com
+disqus_identifier:     https-rlawjddbs-github-io
+
+
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
