@@ -4,12 +4,27 @@ title: 카테고리가 "OpenLayers"인 글 목록
 ---
 <!--temp에 포함된 글들:-->
 <section>
-	<ul>
-		{% for post in site.categories.OpenLayers %}
-		<li style="list-style:disc">
-			<a href="{{ post.url }}">{{ post.title }}</a>
-			<div class="post-date code float_right"><span id="koreanSpan">{{post.date | date : '%Y년 %m월 %d일'}}</span></div>
-		</li>
-		{% endfor %}
-	</ul>
+	{% for post in site.categories.OpenLayers %}
+		{% unless post.next %}
+			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
+		{% else %}
+			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+			{% if year != nyear %}
+				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
+			{% endif %}
+		{% endunless %}
+
+		<ul>
+			<li>
+				<div class="post-date code">
+					<span>{{ post.date | date: "%b %d" }}</span>
+				</div>
+				<div class="title">
+					<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
+				</div>
+			</li>
+		</ul>
+
+	{% endfor %}
 </section>
