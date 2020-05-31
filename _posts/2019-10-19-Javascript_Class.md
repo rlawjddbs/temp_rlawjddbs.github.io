@@ -21,7 +21,6 @@ index.html
 </body>
 </html>
 ```
-  
 dbs.js (super class)
 ```javascript
 (function(){
@@ -29,7 +28,19 @@ dbs.js (super class)
 
     window.dbs = {
         version : "1.0"
+    };
+
+    dbs.defined = function(value) {
+        return value !== undefined && value !== null;
     }
+
+    dbs.isEmpty = function(value) {
+		return value === undefined || value == null || value == "" || $.isEmptyObject(value);
+	}
+
+	dbs.isNotEmpty = function(value) {
+		return !dbs.isEmpty(value);
+	}
 
     window.dbs = _class || {};
     // window.dbs = _class || new Object();
