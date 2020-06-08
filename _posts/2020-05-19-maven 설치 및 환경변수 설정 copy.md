@@ -1,6 +1,6 @@
 ---
 title: maven 설치 및 환경변수 설정 (macOS)
-updated: 2020-05-18 23:12
+updated: 2020-06-08 20:48
 category: Java
 ---
 ### 1. Maven 다운  
@@ -146,6 +146,8 @@ package: com.lab.dbs
 $    
 ```
 
+### 생성된 프로젝트의 구조
+![tree](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/0608/tree.png)
 
 
 [^1]: mac catalina 업데이트 후 설치한 zsh 설치와 관련있는지 확인 필요.  
