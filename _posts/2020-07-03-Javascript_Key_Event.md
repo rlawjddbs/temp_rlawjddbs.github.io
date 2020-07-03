@@ -4,8 +4,6 @@ updated: 2020-07-03 09:46
 category: javascript
 ---
 
-<a href="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/0703/result.gif" style="border-bottom:0;" target="_new">![](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/0703/result.gif)</a>  
-  
 JS 데이터 목록 화살표 키 Event
 
 ```javascript
