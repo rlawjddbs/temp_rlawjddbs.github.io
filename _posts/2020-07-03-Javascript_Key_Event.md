@@ -59,6 +59,7 @@ JS 데이터 목록 화살표 키 Event
 				}
 				// shift + up
 				if(_self.shiftDown === true && e.keyCode === 38){
+					e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 					_self.upDown = true;
 					$liNode = $("div.lnb-list").find("li.active");
 					
@@ -73,6 +74,7 @@ JS 데이터 목록 화살표 키 Event
 					} else if ( $liNode.length > 1 && _self.downDown === true ){
 						$liNode.last().removeClass("active");
 						$liNode = $(this).find("li.active");
+						return scrollToSelection(true);
 					} else if ( $liNode.length === 1 && _self.downDown === true ){
 						_self.downDown = false;
 						if($liNode.prev().prop("tagName") === "LI") {
@@ -85,6 +87,7 @@ JS 데이터 목록 화살표 키 Event
 				}
 				// shift + down
 				if(_self.shiftDown === true && e.keyCode === 40){
+					e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 					_self.downDown = true;
 					$liNode = $(this).find("li.active");
 					
@@ -99,6 +102,7 @@ JS 데이터 목록 화살표 키 Event
 					} else if ( $liNode.length > 1 && _self.upDown === true ){
 						$liNode.first().removeClass("active");
 						$liNode = $(this).find("li.active");
+						return scrollToSelection();
 					} else if ( $liNode.length === 1 && _self.upDown === true ){
 						_self.upDown = false;
 						if($liNode.next().prop("tagName") === "LI") {
@@ -111,7 +115,7 @@ JS 데이터 목록 화살표 키 Event
 				}
 				// ctrl + A 
 				if(_self.ctrlDown === true && e.keyCode === 65){
-					e.preventDefault();
+					e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 					$(this).find("li").addClass("active");
 					return;
 				}
@@ -134,7 +138,7 @@ JS 데이터 목록 화살표 키 Event
 				}
 				// up
 				if(e.which === 38 || e.keyCode === 38){
-					e.preventDefault();
+					e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 					$liNode = $("div.lnb-list").find("li.active");
 					
 					if($liNode.length === 0){
@@ -154,7 +158,7 @@ JS 데이터 목록 화살표 키 Event
 				}
 				// down
 				if(e.which === 40 || e.keyCode === 40){
-					e.preventDefault();
+					e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 					$liNode = $("div.lnb-list").find("li.active");
 					
 					if($liNode.length === 0) {
