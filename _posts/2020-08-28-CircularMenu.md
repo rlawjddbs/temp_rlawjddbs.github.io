@@ -160,16 +160,16 @@ category: javascript
 ```html
 ...
 <body>
-	<!-- [begin] cctv button -->
-	<button class="btnCctv" style="position:absolute; top:200px; left:200px;"></button>
-	<!-- [end] cctv button -->
+    <!-- [begin] cctv button -->
+    <button class="btnCctv" style="position:absolute; top:200px; left:200px;"></button>
+    <!-- [end] cctv button -->
 
-	<!-- [begin] circular-menu -->
-	<div class="circular-menu" style="display:none;">
+    <!-- [begin] circular-menu -->
+    <div class="circular-menu" style="display:none;">
         <ul>
-        </ul>        
+        </ul>
     </div>
-	<!-- [end] circular-menu -->
+    <!-- [end] circular-menu -->
 
 </body>
 ...
