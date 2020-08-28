@@ -3,11 +3,13 @@ title: JS - 원형 컨텍스트 메뉴
 updated: 2020-08-28 10:38
 category: javascript
 ---
+**요약** : transform으로 회전 후 회전시킨 방향으로 밀어내고 원래대로 회전
 
 ### JS 원형 컨텍스트 메뉴
-1. cctv 버튼 클릭 시 원형 메뉴가 나타나야 함
-2. 원형 메뉴는 메뉴의 개수 및 각도를 자유롭게 조절할 수 있어야 함
-3. 테스트를 위한 cctv 버튼 요소의 clone 생성 후 임의 배치   
+> 1. cctv 버튼 클릭 시 원형 메뉴가 나타나야 함
+> 2. 원형 메뉴는 메뉴의 개수 및 각도를 자유롭게 조절할 수 있어야 함
+> 3. 테스트를 위한 cctv 버튼 요소의 clone 생성 후 임의 배치
+
    
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200828/circular_contextmenu.gif)
 
@@ -185,3 +187,4 @@ button{cursor: pointer;}
 .btnCctv{width:20px; height:21px; border: none; background: url(../images/bg_cctv_cam.png) no-repeat center center; outline:none; padding:0; margin:0; z-index:45;}
 .btnCctv.active{z-index:55;}
 ```
+
