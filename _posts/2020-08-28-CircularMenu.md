@@ -5,7 +5,7 @@ category: javascript
 ---
 
 ### JS 원형 컨텍스트 메뉴
-![circularContextMenu](https://github.com/rlawjddbs/rlawjddbs.github.io/blob/master/_posts/imgs/200828/circular_contextmenu.gif)
+![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200828/circular_contextmenu.gif)
 
 
 ```javascript
