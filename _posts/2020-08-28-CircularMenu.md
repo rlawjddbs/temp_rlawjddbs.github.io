@@ -5,8 +5,11 @@ category: javascript
 ---
 
 ### JS 원형 컨텍스트 메뉴
+1. cctv 버튼 클릭 시 원형 메뉴가 나타나야 함
+2. 원형 메뉴는 메뉴의 개수 및 각도를 자유롭게 조절할 수 있어야 함
+3. 테스트를 위한 cctv 버튼 요소의 clone 생성 후 임의 배치   
+   
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200828/circular_contextmenu.gif)
-
 
 #### Main.js
 ```javascript
@@ -167,6 +170,7 @@ category: javascript
 	<!-- [end] circular-menu -->
 
 </body>
+...
 ```
 
 #### CSS 
