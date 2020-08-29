@@ -292,3 +292,93 @@ To create a production build, use yarn build.
 
 ## 라이브러리 설치
 `package.json`을 통해 필요한 라이브러리 미리 설치. GitHub(또는 자료실)에서 제공하는 package.json을 기준으로 라이브러리 설치
+### 1. package.json 수정하기
+```json
+{
+  "name": "dbs-snake",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "0.18.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16.3": "^1.4.1",
+    "moment": "^2.24.0",
+    "next": "^8.1.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.7",
+    "react-test-renderer": "^16.7.0",
+    "react-with-styles": "^3.2.1",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.1",
+    "redux-pack": "^0.1.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "selector-action": "^1.1.1"
+  },
+  "scripts": {
+    "dev": "next",
+    "predeploy": "yarn build-all",
+    "deploy": "firebase deploy",
+    "build-all": "yarn ssrbuild && yarn build-firebase",
+    "build-firebase": "cd \"./functions\" && yarn --ignore-engines",
+    "ssrbuild": "next build",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "mockserver": "json-server --watch --delay 500 --port 4000 mock/create.js",
+    "errorserver": "node mock/fake.js",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "aphrodite": "^2.2.3",
+    "babel-loader": "^8.0.5",
+    "json-server": "^0.14.2",
+    "node-sass": "^4.11.0",
+    "react-with-styles-interface-aphrodite": "^5.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "sass-loader": "^7.1.0",
+    "storybook-addon-jsx": "^7.1.13"
+  }
+}
+```
+### 2. package.json에 적힌 라이브러리 모두 설치하기
+- 루트 폴더에서 명령어 실행
+- 화면에 warning 메시지가 나타나는데, 이는 각 버전의 호환성에 대해서 제작 당시 명시된 버전과 다르다는 것을 알려주는 주의 내용이므로 무시해도 좋음.
+```terminal
+yarn
+```
+> 지속적인 node 버전 에러로 nodejs의 버전을 현 최신 버전인 14.9.0으로 설치 후 라이브러리 설치를 진행 함
+> ```terminal
+> nvm install 14.9.0
+> nvm use 14.9.0
+> yarn
+> ```
+> #### 라이브러리 설치 후 버전 회귀 및 환경 변수 파일 설정
+> ```terminal
+> nvm use 8.10.0
+> ```
+> ```env
+> SKIP_PREFLIGHT_CHECK = true
+> ```
+> ```terminal
+> yarn start
+> ```
+
