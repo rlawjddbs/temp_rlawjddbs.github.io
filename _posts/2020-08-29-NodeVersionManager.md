@@ -60,7 +60,7 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.bash
 ```
 
-정상 설치되었다 생각 후 nvm 버전 확인 커맨드 `nvm ls`를 입력했더니
+nvm 버전 확인 커맨드 `nvm ls`를 입력
 ```terminal
 nvm ls
             N/A
@@ -69,6 +69,8 @@ node -> stable (-> N/A) (default)
 unstable -> N/A (default)
 nvm_list_aliases:36: no matches found: /Users/zeongyun/.nvm/alias/lts/*
 ```
+설치가 안된 항목이 더러 있다는 것을 확인
+
 ### 2. NVM 버전 확인하기
 ```terminal
 nvm -v
