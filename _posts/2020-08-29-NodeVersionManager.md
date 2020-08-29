@@ -6,7 +6,7 @@ category: javascript
 **참고문서** : 실리콘밸리 개발 방법으로 배우는 Do it 리액트 프로그래밍 정석
 
 # 리액트 개발 환경 설치하기
-## 노드 제이에스란
+## Nodejs
 - 구글에서 공개한 소프트웨어
 - V8 엔진을 기반으로 만든 자바스크립트 런타임 도구
 - 웹 브라우저가 아닌 컴퓨터(or 서버)에서 JS를 실행할 수 있게 해줌
@@ -140,7 +140,7 @@ Example:
 Note:
   to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
 ```
-npm(Node Package Manager)설치가 진행되지 않아 그런지 이런 결과가 출력된다.
+마지막 줄에 nvm 삭제를 하려면 ~/.nvm 폴더만 삭제하면 된다고 한다.
 
 ### 3. NVM으로 노드제이에스 설치하기
 최신버전은 12버전이지만 현재 현업에서 가장 많이 사용하는 노드제이에스 버전이 8이므로 8버전으로 설치
@@ -382,3 +382,32 @@ yarn
 > yarn start
 > ```
 
+# 리액트 앱 수정하기 (Hello World)
+## 1. App.css 수정하기
+```css
+...
+.title {
+  font-style:italic;
+}
+```
+## 2. 스타일 반영하기
+```javascript
+import React, { Component } from 'react';
+import './App.css'
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1 className="title">Hello, World!</h1>
+      </div>
+    )
+  }
+}
+export default App;
+```
+- render() 함수는 HTML을 반환함. 여기서 반환된 HTML이 웹 브라우저에 출력 됨.
+- HTML의 스타일 클래스 이름은 자바스크립트 클래스(class) 키워드와 같으므로 리액트에서는 class가 아니라 className으로 정의하여 사용함.
+
+## 3. 리액트 핫 리로딩으로 변경된 화면 확인하기
+- 리액트 앱을 구동한 상태라면 파일을 저장한 즉시 화면이 바뀜. 이렇게 되는 이유는 create-react-app의 핫 리로딩(Hot reloading)이라는 모듈 덕분임.
+![Hello,World!](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/0829/helloWorld.png)
