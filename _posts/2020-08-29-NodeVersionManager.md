@@ -382,16 +382,16 @@ yarn
 > yarn start
 > ```
 
-# 리액트 앱 수정하기 (Hello World)
-## 1. App.css 수정하기
+## 리액트 앱 수정하기 (Hello World)
+### 1. App.css 수정하기
 ```css
 ...
 .title {
   font-style:italic;
 }
 ```
-## 2. 스타일 반영하기
-```javascript
+### 2. 스타일 반영하기
+```js
 import React, { Component } from 'react';
 import './App.css'
 class App extends Component {
@@ -408,6 +408,6 @@ export default App;
 - render() 함수는 HTML을 반환함. 여기서 반환된 HTML이 웹 브라우저에 출력 됨.
 - HTML의 스타일 클래스 이름은 자바스크립트 클래스(class) 키워드와 같으므로 리액트에서는 class가 아니라 className으로 정의하여 사용함.
 
-## 3. 리액트 핫 리로딩으로 변경된 화면 확인하기
+### 3. 리액트 핫 리로딩으로 변경된 화면 확인하기
 - 리액트 앱을 구동한 상태라면 파일을 저장한 즉시 화면이 바뀜. 이렇게 되는 이유는 create-react-app의 핫 리로딩(Hot reloading)이라는 모듈 덕분임.
 ![Hello,World!](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/0829/helloWorld.png)
