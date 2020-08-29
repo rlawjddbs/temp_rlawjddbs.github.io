@@ -14,7 +14,7 @@ category: javascript
 노드 패키지 매니저(npm)와 노드 제이에스의 버전 관리를 위해 nvm 설치를 해야 함.   
 책에서 설명된 자료 대신 Mac/linux 용 nvm 을 설치해야 함
    
-![Mac/linux 용 NVM 설치 가이드](https://github.com/nvm-sh/nvm)
+[Mac/linux 용 NVM 설치 가이드](https://github.com/nvm-sh/nvm)
 
 ## NVM 셋팅
 ### 1. NVM 설치하기
