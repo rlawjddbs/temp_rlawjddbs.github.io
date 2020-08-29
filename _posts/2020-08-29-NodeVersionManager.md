@@ -288,7 +288,7 @@ You can now view dbs-example in the browser.
 Note that the development build is not optimized.
 To create a production build, use yarn build.
 ```
-![result of yarn start](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/0829/result.png)
+![result of yarn start](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/0829/yarn_start.png)
 
 ## 라이브러리 설치
 `package.json`을 통해 필요한 라이브러리 미리 설치. GitHub(또는 자료실)에서 제공하는 package.json을 기준으로 라이브러리 설치
