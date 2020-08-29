@@ -46,3 +46,6 @@ defaults:
       type:         "posts"
     values:
       layout:       "post"
+
+# Google Analytics
+google_analystics: 'UA-176736835-1'
