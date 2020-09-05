@@ -157,7 +157,7 @@ iframe {
 }
 ul,
 ol {
-    /******* 2018-12-20-목 상하 외부여백 수정(40px -> 20px) 작성자 : 김정윤 *******/
+  /******* 2018-12-20-목 상하 외부여백 수정(40px -> 20px) 작성자 : 김정윤 *******/
   margin: 20px 0;
   padding-left: 50px;
   li {
@@ -435,3 +435,6 @@ span.site-tag{
   padding-left:10px;
   padding-right:10px;
 }
+
+/* 09_05_2020 메인화면 포스트 타이틀 옆 카테고리 */
+.ctgry{letter-spacing: normal;}
