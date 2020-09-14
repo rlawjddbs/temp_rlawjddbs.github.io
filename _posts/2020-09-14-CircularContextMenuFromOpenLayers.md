@@ -206,6 +206,7 @@ category: OpenLayers
         } // setMenuComp
 
         return initialize();
+		
     };
 
     olprj.util = $.extend(olprj.util || {}, {
