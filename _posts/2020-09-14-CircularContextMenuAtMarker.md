@@ -12,7 +12,7 @@ category: OpenLayers
 > 4. 개발자는 원형 메뉴의 개수 및 각도를 `자유롭게 커스터마이징` 할 수 있어야 함
    
 이전에 구현해본 [원형 컨텍스트 메뉴](https://rlawjddbs.github.io/CircularMenu)를 응용하여 `OpenLayers` 라이브러리에 적용해 보았다.   
-OpenLayers 서버가 아닌 다른 서버의 `GeoServer`에 생성한 `WMS Layer`를 활용하였고, `CORS`[^1] 정책 때문에 삽질 했지만 클라이언트의 요청 및 응답을 송수신하는 서버에 `proxy.jsp`를 구성하여 해당 `proxy.jsp`에 클라이언트의 요청을 날린 결과 CORS 정책 위반에 관한 에러를 방지할 수 있었다. 다행히 OpenLayers에 `<canvas>`요소 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝났다.   
+OpenLayers 서버가 아닌 다른 서버의 `GeoServer`에 생성한 `WMS Layer`를 활용하였고, `CORS`[^1] 정책 때문에 삽질 했지만 클라이언트의 요청 및 응답을 송수신하는 서버에 `proxy.jsp`를 구성하여 해당 `proxy.jsp`에 클라이언트의 요청을 받고 GeoServer에 재요청한 결과 CORS 정책 위반에 관한 에러를 방지할 수 있었다. 다행히 OpenLayers에 `<canvas>`요소 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝났다.   
    
 #### 원형 컨텍스트 메뉴 구현 결과
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200914/circular_contextmenu.gif)   
