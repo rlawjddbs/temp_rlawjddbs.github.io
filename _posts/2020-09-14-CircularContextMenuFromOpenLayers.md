@@ -187,8 +187,8 @@ category: OpenLayers
                 option.startAngle -= circle;
             } // end if
             
-            if (!option.divCnt || option.divCnt < $comp.length) { 
-                option.divCnt = $comp.length; 
+            if (!option.divCnt || option.divCnt < $comp.length) {
+                option.divCnt = $comp.length;
             } // end if
             
             var division = circle / option.divCnt; // 각 메뉴의 각도 연산
@@ -206,7 +206,7 @@ category: OpenLayers
         } // setMenuComp
 
         return initialize();
-		
+
     };
 
     olprj.util = $.extend(olprj.util || {}, {
@@ -233,8 +233,7 @@ category: OpenLayers
 		let _self = this; // Main Object Instance
 		let map = null; // Map
 		
-		let bounds = [224651.386, 423458.585,
-            268876.421, 464775.252];
+		let bounds = [224651.386, 423458.585, 268876.421, 464775.252];
 		
 		let marker = null;
 		let container = null; // Popup Container
