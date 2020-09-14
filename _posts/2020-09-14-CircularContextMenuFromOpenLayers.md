@@ -15,10 +15,10 @@ category: OpenLayers
    
 #### 원형 컨텍스트 메뉴 구현 결과
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200914/circular_contextmenu.gif)   
-> 1. cctv 버튼(`OpenLayers Object`) 클릭 시 원형 메뉴가 나타나야 함
-> 2. 원형 메뉴는 메뉴를 닫기 전까지 지도를 이동하거나 확대 및 축소하여도 cctv 버튼에 `같은 크기로 항상 고정`되어 있어야 함
+> 1. cctv 버튼(`marker`) 클릭 시 원형 메뉴가 나타나야 함
+> 2. 원형 메뉴는 메뉴를 닫기 전까지 지도내에서 화면을 스크롤하거나 확대 및 축소하여도 cctv 버튼에 `같은 크기로 항상 고정`되어 있어야 함
 > 3. 원형 메뉴는 메뉴의 영역 밖을 클릭하기 전까지는 `close` 되지 않아야 함
-> 4. 개발자는 원형 메뉴의 개수 및 각도를 `자유롭게 커스터마이징` 할 수 있어야 함
+> 4. 운영자가 원형 메뉴의 개수 및 각도를 `조절` 할 수 있어야 함 (커스터 마이징 기능 함수로 제공해야 함)
    
 #### index.jsp
 ```jsp
