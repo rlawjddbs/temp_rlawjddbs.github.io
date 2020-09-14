@@ -34,11 +34,11 @@ category: OpenLayers
 <script src="/ol.popup/common/js/Main.js"></script>
 </head>
 <body>
-	<div id="map" class="map"></div>
-	<div id="popup" class="circular-menu" style="">
-        <ul>
-        </ul>        
-    </div>
+  <div id="map" class="map"></div>
+  <div id="popup" class="circular-menu" style="">
+    <ul>
+    </ul>        
+  </div>
 </body>
 <script type="text/javascript">
   olprj.cmmn.Main();
@@ -55,7 +55,6 @@ category: OpenLayers
 	}
 	
 	window.olprj = $.extend(window.olprj || {});
-	
 })();
 ```
    
@@ -141,7 +140,7 @@ category: OpenLayers
 		} // outer function initOverlay
 		
 		// ---------------------------------------------------------------------------------
-		// Create Marker Point - LonLat : 경도(longitude)와 위도(latitude)의 합쳐 일컫는 말
+		// Create Marker Point - LonLat : 경도(longitude)와 위도(latitude)를 합쳐 일컫는 말
 		// ---------------------------------------------------------------------------------
 		this.createMarker = function(longitude, latitude){
 			return createMarker(longitude, latitude);
