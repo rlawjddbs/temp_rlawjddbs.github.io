@@ -2,9 +2,7 @@
 layout: page
 title: About dbs
 ---
-<div style="text-align:center;"><strong>김정윤</strong><br />
-1989년생
-</div>
+<div style="text-align:center;">김정윤(1989 ~ )</div>
 <p style="text-align:center;">
     <img src="https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/assets/common/imgs/about/pxArt.gif" style="width:100px;" />
 </p>
