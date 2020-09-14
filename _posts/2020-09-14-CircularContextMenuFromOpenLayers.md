@@ -106,7 +106,7 @@ category: OpenLayers
 		// --------------------------------
 		function initOverlay(option) {
 			return new ol.Overlay({
-				`element : option.container`,
+				element : option.container,
 				autoPan : true,
 				autoPanAnimation : {
 					duration : 250
