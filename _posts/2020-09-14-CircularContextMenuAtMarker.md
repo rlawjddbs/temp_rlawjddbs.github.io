@@ -265,8 +265,7 @@ OpenLayers 서버가 아닌 다른 서버의 `GeoServer`에 생성한 `WMS Layer
 		function initEvent() {
 			
 			_self.map.on("click", function(evt){
-				console.log(evt.coordinate);
-				
+				console.log(evt.coordinate); // cordinate : Longitude, Latitude를 배열 형태로 반환
 				if (_self.map.hasFeatureAtPixel(evt.pixel) === true) {
 					_self.map.forEachLayerAtPixel(evt.pixel, function(layer){
 						if(layer.get("title") === "marker") {
