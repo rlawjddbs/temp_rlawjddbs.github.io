@@ -3,8 +3,8 @@ title: OpenLayers 4 - 마커위에 원형 메뉴 띄우기
 updated: 2020-09-14 16:47
 category: OpenLayers
 ---
-**참고문서** : [OpenLayers 4.6.5 API - Example : Popup](https://www.giserdqy.com/wp-content/guids/ol-v4.6.5/examples/popup.html?q=popup)
-
+**참고문서** : [OpenLayers 4.6.5 API - Example : Popup](https://www.giserdqy.com/wp-content/guids/ol-v4.6.5/examples/popup.html?q=popup)   
+   
 ### OpenLayers(v4.6.5) - 마커 클릭 시 원형 메뉴 띄우기 
    
 - 이전에 구현해본 [원형 컨텍스트 메뉴](https://rlawjddbs.github.io/CircularMenu)를 응용하여 `OpenLayers` 라이브러리에 적용
@@ -106,7 +106,7 @@ category: OpenLayers
 		// --------------------------------
 		function initOverlay(option) {
 			return new ol.Overlay({
-				element : option.container,
+				`element : option.container`,
 				autoPan : true,
 				autoPanAnimation : {
 					duration : 250
@@ -236,11 +236,8 @@ category: OpenLayers
             268876.421, 464775.252];
 		
 		let marker = null;
-		
 		let container = null; // Popup Container
-		let content = null; // Popup Content
-		
-		let overlay = null; // Overlay
+		let overlay = null; // Layer containing Popup
 		
 		this.getMap = function() {
 			return getMap();
