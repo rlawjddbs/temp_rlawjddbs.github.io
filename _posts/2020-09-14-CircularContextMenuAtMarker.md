@@ -19,8 +19,7 @@ category: OpenLayers
 
 #### index.jsp
 ```jsp
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,10 +44,11 @@ category: OpenLayers
   </div>
 </body>
 <script type="text/javascript">
-  olprj.cmmn.Main();
+    olprj.cmmn.Main();
 </script>
 </html>
 ```
+구조는 매우 단순함
    
 #### style.css
 ```css
