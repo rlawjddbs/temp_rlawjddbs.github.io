@@ -12,7 +12,7 @@ category: OpenLayers
 > 4. 원형 메뉴는 메뉴의 개수 및 각도를 자유롭게 조절할 수 있어야 함
    
 이전에 작성한 원형 컨텍스트 메뉴를 응용하여 OpenLayers 라이브러리에 적용해 보았다.   
-삽질을 엄청나게 하긴 했지만 다행히 OpenLayers에 <canvas> 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝났다.   
+삽질을 엄청나게 하긴 했지만 다행히 OpenLayers에 `<canvas>`요소 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝났다.   
    
 #### 원형 컨텍스트 메뉴 구현 결과
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200914/circular_contextmenu.gif)   
@@ -111,6 +111,7 @@ category: OpenLayers
 .circular-menu ul{width: 100%; height:100%; margin:0; padding:0; border:2px solid #ffa500; border-radius:50px; box-sizing:border-box; background-color:rgba(255, 255, 255, .23);}
 .circular-menu li{width:20px; height:20px; position:absolute; border-radius:10px; background:#fff; box-sizing:border-box; border:2px solid #ff0000; list-style:none; left:25px; top:25px; cursor:pointer;}
 ```
+스타일은 오픈레이어스 4.6.5
    
 #### olprj.js
 ```javascript
