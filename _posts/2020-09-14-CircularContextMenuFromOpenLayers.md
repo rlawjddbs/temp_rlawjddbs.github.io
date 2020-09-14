@@ -3,20 +3,23 @@ title: OpenLayers 4 - 마커위에 원형 메뉴 띄우기
 updated: 2020-09-14 16:47
 category: OpenLayers
 ---
-**참고문서** : [OpenLayers 4.6.5 API](https://www.giserdqy.com/wp-content/guids/ol-v4.6.5/apidoc/olx.html)
+**참고문서** : [OpenLayers 4.6.5 API - Example : Popup](https://www.giserdqy.com/wp-content/guids/ol-v4.6.5/examples/popup.html?q=popup)
 
 ### OpenLayers(v4.6.5) - 마커 클릭 시 원형 메뉴 띄우기 
-> 1. cctv 버튼(`OpenLayers Object`) 클릭 시 원형 메뉴가 나타나야 함
-> 2. 원형 메뉴는 지도를 이동하여도 cctv 버튼에 `항상 고정`되어 있어야 함
-> 3. 원형 메뉴는 영역 밖을 클릭하기 전까지는 `close` 되지 않아야 함
-> 4. 개발자는 원형 메뉴의 개수 및 각도를 `자유롭게 커스터마이징` 할 수 있어야 함
    
-이전에 구현해본 [원형 컨텍스트 메뉴](https://rlawjddbs.github.io/CircularMenu)를 응용하여 `OpenLayers` 라이브러리에 적용해 보았다.   
-OpenLayers 서버가 아닌 다른 서버의 `GeoServer`에 생성한 `WMS Layer`를 활용하였고, `CORS`[^1] 정책 때문에 삽질 했지만 클라이언트의 요청 및 응답을 송수신하는 서버에 `proxy.jsp`를 구성하여 해당 `proxy.jsp`가 프록시로서 클라이언트의 요청을 받고 GeoServer의 데이터를 가져와 응답하도록 하여 CORS 정책 위반에 관한 에러를 방지하였다. 다행히 OpenLayers에 `<canvas>`요소 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝났다.   
+- 이전에 구현해본 [원형 컨텍스트 메뉴](https://rlawjddbs.github.io/CircularMenu)를 응용하여 `OpenLayers` 라이브러리에 적용
+- OpenLayers 서버가 아닌 다른 서버의 `GeoServer`에서 추가한 `WMS Layer`를 활용
+- `CORS`[^1] 정책 때문에 엄청 헤맴
+	- 클라이언트의 요청 및 응답을 송수신하는 서버에 `proxy.jsp`를 구성하여 해당 `proxy.jsp`가 프록시로서 클라이언트의 요청을 받고 GeoServer의 데이터를 가져와 응답하도록 하여 CORS 정책 위반에 관한 에러를 방지 
+- 다행히 OpenLayers에 `<canvas>`요소 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝남   
    
 #### 원형 컨텍스트 메뉴 구현 결과
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200914/circular_contextmenu.gif)   
-
+> 1. cctv 버튼(`OpenLayers Object`) 클릭 시 원형 메뉴가 나타나야 함
+> 2. 원형 메뉴는 지도를 이동하여도 cctv 버튼에 `항상 고정`되어 있어야 함
+> 3. 원형 메뉴는 영역 밖을 클릭하기 전까지는 `close` 되지 않아야 함
+> 4. 개발자는 원형 메뉴의 개수 및 각도를 `자유롭게 커스터마이징` 할 수 있어야 함 (내부 함수로 구현)
+   
 #### index.jsp
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
