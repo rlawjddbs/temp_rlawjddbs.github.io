@@ -7,11 +7,11 @@ category: OpenLayers
    
 ### OpenLayers(v4.6.5) - 마커 클릭 시 원형 메뉴 띄우기 
    
-- 이전에 구현해본 [원형 컨텍스트 메뉴](https://rlawjddbs.github.io/CircularMenu)를 응용하여 `OpenLayers` 라이브러리에 적용
-- OpenLayers 서버가 아닌 다른 서버의 `GeoServer`에서 추가한 `WMS Layer`를 활용
+- 이전에 구현했던 [원형 컨텍스트 메뉴](https://rlawjddbs.github.io/CircularMenu)를 응용하여 `OpenLayers` 라이브러리에 적용
+- `GeoServer`에 추가한 `WMS Layer`를 OpenLayers의 로 등록하여 배경지도 구성
 - `CORS`[^1] 정책 때문에 엄청 헤맴
 	- 클라이언트의 요청 및 응답을 송수신하는 서버에 `proxy.jsp`를 구성하여 해당 `proxy.jsp`가 프록시로서 클라이언트의 요청을 받고 GeoServer의 데이터를 가져와 응답하도록 하여 CORS 정책 위반에 관한 에러를 방지 
-- 다행히 OpenLayers에 `<canvas>`요소 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝남   
+- OpenLayers의 `Overlay`를 활용
    
 #### 원형 컨텍스트 메뉴 구현 결과
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200914/circular_contextmenu.gif)   
@@ -171,26 +171,27 @@ category: OpenLayers
         }
 
         /**
+		 * 원형 메뉴 컴포넌트 설정
          * @param startAngle 시작 각도
          * @param divCnt 나눌 개수
          */
         function setMenuComp(option) {
-            const circle = 360;
-            var $comp = $(".circular-menu > ul").find("li");
+            const circle = 360; // 360° degree
+            var $comp = $(".circular-menu > ul").find("li"); // Circular Menu Component
             
             if (!option.startAngle) {
                 option.startAngle = circle;
-            }
+            } // end if
 
             if (option.startAngle > circle) {
                 option.startAngle -= circle;
-            }
+            } // end if
             
             if (!option.divCnt || option.divCnt < $comp.length) { 
                 option.divCnt = $comp.length; 
-            }
+            } // end if
             
-            var division = circle / option.divCnt;
+            var division = circle / option.divCnt; // 각 메뉴의 각도 연산
             for(var i = 0; i < $comp.length; i++){
                 option.startAngle += division;
                 if(option.startAngle > circle) { option.startAngle %= circle; }
@@ -200,10 +201,9 @@ category: OpenLayers
                     "-ms-transform": "rotate(" + option.startAngle + "deg) translate(2.2em) rotate("+ (-option.startAngle) + "deg)",
                     "-o-transform": "rotate(" + option.startAngle + "deg) translate(2.2em) rotate("+ (-option.startAngle) + "deg)",
                     "transform": "rotate(" + option.startAngle + "deg) translate(2.2em) rotate("+ (-option.startAngle) + "deg)",
-                });
-            }
-            
-        }
+                }); // css
+            } // end for
+        } // setMenuComp
 
         return initialize();
     };
@@ -275,7 +275,7 @@ category: OpenLayers
 					});
 				} else {
 					_self.overlay.setPosition(undefined);
-				}
+				} // end else
 			});
 		} // initEvent
 		
@@ -284,22 +284,21 @@ category: OpenLayers
 				layers: [ // Option 1
 					new ol.layer.Image({
 						source: new ol.source.ImageWMS({
-                  ratio: 1,
-                  // proxy.jsp를 통해 geoserver로 요청을 날림. 이 과정을 거치지 않으면 
-                  // CORS(Cross Origin Resource Sharing) 정책에 위반되어 예외가 발생함
-				          url: 'http://???.???.???.???:????/ol.popup/proxy.jsp?url=http://???.???.???.???:????/geoserver/TEST/wms',
-				          params: {'FORMAT': "image/png",
-				        	  'VERSION': '1.1.1',  
-				        	  "LAYERS": 'TEST:LARD_ADM_SECT_SGG',
-				        	  "exceptions": 'application/vnd.ogc.se_inimage'
-				          } // params
-				        }) // ImageWms Constructor
+							ratio: 1,
+							// proxy.jsp를 통해 geoserver로 요청을 날림. 이 과정을 거치지 않으면 
+							// CORS(Cross Origin Resource Sharing) 정책에 위반되어 예외가 발생함
+							url: 'http://???.???.???.???:????/ol.popup/proxy.jsp?url=http://???.???.???.???:????/geoserver/TEST/wms',
+							params: {
+								'FORMAT': "image/png",
+								'VERSION': '1.1.1',  
+								"LAYERS": 'TEST:LARD_ADM_SECT_SGG',
+								"exceptions": 'application/vnd.ogc.se_inimage'
+							} // params
+						}) // ImageWms Constructor
 					}), // Image Constructor
 					new ol.layer.Tile({
 						visible: false,
-						source: 
-							new ol.source.TileWMS({
-              
+						source: new ol.source.TileWMS({
 							url: 'http://???.???.???.???:????/ol.popup/proxy.jsp?url=http://???.???.???.???:????/geoserver/TEST/wms',
 							params: {
 								"FORMAT" : "image/png",
@@ -328,33 +327,24 @@ category: OpenLayers
 				}) // view props
 			}); // Map Constructor
 			
+			// fit the view
 			_self.map.getView().fit(bounds, _self.map.getSize());
-			
 		} // createMap
-		
 		function createPopup() {
-			
 			_self.container = document.getElementById("popup");
-
-			
 		} // createMap
-		
 		function createOverlay() {
 			_self.overlay = olprj.util.OLUtil.initOverlay({ container : _self.container });
-		}
-		
+		} // createOverlay
 		function getMap() {
 			return _self.map;
-		}
-		
+		} // getMap
 		return initialize();
-	}
-	
+	} // _class
 	olprj.cmmn = $.extend(olprj.cmmn || {}, {
 		Main : _class
-	})
-	
+	}); // extend
 })();
 ```
-
+   
 [^1]: `Cross Origin Resource Sharing`. 직역하면 교차 출처 리소스 공유. 서비스를 제공하는 서버가 아닌 다른 서버를 통해 실제 서비스를 제공하는 서버로부터 데이터를 요청할 경우 브라우저는 CROS 정책을 위반한 것으로 간주하여 스크립트에서 시작한 `Http 요청`을 제한해 버린다.
