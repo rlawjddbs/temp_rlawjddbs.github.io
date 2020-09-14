@@ -51,7 +51,8 @@ category: OpenLayers
 </script>
 </html>
 ```
-OpenLayers로 지도를 시각화할 div 요소(#map)와 원형 컨텍스트 메뉴를 구성할 div 요소(#popup)을 만든다. 
+1. 지도를 시각화할 요소 `<div id="map" class="map">`
+2. 원형 컨텍스트 메뉴를 구성할 요소 `<div id="popup" class="circular-menu">`
    
 #### style.css
 ```css
@@ -63,7 +64,7 @@ OpenLayers로 지도를 시각화할 div 요소(#map)와 원형 컨텍스트 메
 .circular-menu ul{width: 100%; height:100%; margin:0; padding:0; border:2px solid #ffa500; border-radius:50px; box-sizing:border-box; background-color:rgba(255, 255, 255, .23);}
 .circular-menu li{width:20px; height:20px; position:absolute; border-radius:10px; background:#fff; box-sizing:border-box; border:2px solid #ff0000; list-style:none; left:25px; top:25px; cursor:pointer;}
 ```
-스타일은 오픈레이어스 4.6.5의 예제 중 popup 예제에 나온 스타일을 사용했음
+- 오픈레이어스 4.6.5 API 예제 중 popup 예제에 나온 스타일을 사용 (`.map`)
    
 #### olprj.js
 ```javascript
@@ -72,7 +73,6 @@ OpenLayers로 지도를 시각화할 div 요소(#map)와 원형 컨텍스트 메
 	var _class = {
 		version : "1.0" 
 	}
-	
 	window.olprj = $.extend(window.olprj || {});
 })();
 ```
