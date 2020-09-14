@@ -229,20 +229,25 @@ category: OpenLayers
 		olprj.util.CircularContextMenu();
 		olprj.cmmn.Main = this;
 		
+		let _self = this; // Main Class
+		let map = null; // Map Object
 		
-		let _self = this; // Main Object Instance
-		let map = null; // Map
+		let bounds = [224651.386, 423458.585, 268876.421, 464775.252]; // 확인 필요. 위도랑 경도값 외에 다른 값이 왜 필요한지?
 		
-		let bounds = [224651.386, 423458.585, 268876.421, 464775.252];
-		
-		let marker = null;
+		let marker = null; // The Markers to include in the overlay
 		let container = null; // Popup Container
-		let overlay = null; // Layer containing Popup
+		let overlay = null; // Layer containing Popup element
 		
+		// -----------------
+		// Outer Function
+		// -----------------
 		this.getMap = function() {
 			return getMap();
 		}
 		
+		// -----------------
+		// Inner Function
+		// -----------------
 		function initialize() {
 			createPopup(); 
 			createOverlay(); // Overlay 생성
