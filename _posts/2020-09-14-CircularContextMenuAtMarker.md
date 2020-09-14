@@ -46,18 +46,6 @@ category: OpenLayers
 </html>
 ```
    
-#### olprj.js
-```javascript
-(function(){
-	"use strict";
-	var _class = {
-		version : "1.0" 
-	}
-	
-	window.olprj = $.extend(window.olprj || {});
-})();
-```
-   
 #### style.css
 ```css
 @charset "UTF-8";
@@ -112,14 +100,24 @@ category: OpenLayers
 	right: 8px;
 }
 
-.ol-popup-closer:after {
-	content: "✖";
-}
+.ol-popup-closer:after { content: "✖"; }
 
 /* contextmenu */
 .circular-menu{position:absolute; width: 70px; height: 70px; z-index:50; transform:translate3d(-50%, -50%, 0);}
 .circular-menu ul{width: 100%; height:100%; margin:0; padding:0; border:2px solid #ffa500; border-radius:50px; box-sizing:border-box; background-color:rgba(255, 255, 255, .23);}
 .circular-menu li{width:20px; height:20px; position:absolute; border-radius:10px; background:#fff; box-sizing:border-box; border:2px solid #ff0000; list-style:none; left:25px; top:25px; cursor:pointer;}
+```
+   
+#### olprj.js
+```javascript
+(function(){
+	"use strict";
+	var _class = {
+		version : "1.0" 
+	}
+	
+	window.olprj = $.extend(window.olprj || {});
+})();
 ```
    
 #### OLUtil.js
