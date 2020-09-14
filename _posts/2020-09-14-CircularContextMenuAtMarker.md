@@ -5,12 +5,16 @@ category: OpenLayers
 ---
 **참고문서** : [OpenLayers 4.6.5 API](https://www.giserdqy.com/wp-content/guids/ol-v4.6.5/apidoc/olx.html)
 
-### OpenLayers - 마커 클릭 시 원형 메뉴 띄우기 (v4.6.5)
+### OpenLayers(v4.6.5) - 마커 클릭 시 원형 메뉴 띄우기 
 > 1. cctv 버튼(Canvas Object) 클릭 시 원형 메뉴가 나타나야 함
 > 2. 원형 메뉴는 지도를 이동하여도 cctv 버튼에 항상 고정되어 있어야 함
 > 3. 원형 메뉴는 영역 밖을 클릭하기 전까지는 close 되지 않아야 함
 > 4. 원형 메뉴는 메뉴의 개수 및 각도를 자유롭게 조절할 수 있어야 함
 
+이전에 작성한 원형 컨텍스트 메뉴를 응용하여 OpenLayers 라이브러리에 적용해 보았다.   
+삽질을 엄청나게 하긴 했지만 다행히 OpenLayers에 <canvas> 상에 팝업 메뉴를 띄워주는 예제가 있어 실제 적용은 손쉽게 끝났다.   
+   
+#### 원형 컨텍스트 메뉴 구현 결과
 ![circularContextMenu](https://raw.githubusercontent.com/rlawjddbs/rlawjddbs.github.io/master/_posts/imgs/200914/circular_contextmenu.gif)
 
 #### index.jsp
