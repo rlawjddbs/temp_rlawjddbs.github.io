@@ -1,7 +1,7 @@
 ---
 title: JS - 원형 컨텍스트 메뉴
 updated: 2020-08-28 10:38
-category: javascript
+category: JS
 ---
 **요약** : transform으로 회전 후 회전시킨 방향으로 밀어내고 원래대로 회전
 

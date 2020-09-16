@@ -1,7 +1,7 @@
 ---
 title: Javascript Key Event
 updated: 2020-07-03 09:46
-category: javascript
+category: JS
 ---
 
 JS 데이터 목록 화살표 키 Event

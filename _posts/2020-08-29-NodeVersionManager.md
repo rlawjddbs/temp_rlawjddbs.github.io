@@ -1,7 +1,7 @@
 ---
 title: 리액트 개발 환경 설치하기 - NVM 설치
 updated: 2020-08-29 22:40
-category: javascript
+category: JS
 ---
 **참고문서** : 실리콘밸리 개발 방법으로 배우는 Do it 리액트 프로그래밍 정석
 

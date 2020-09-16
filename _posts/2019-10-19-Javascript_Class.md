@@ -1,7 +1,7 @@
 ---
 title: Javascript Class
 updated: 2019-10-19 23:32
-category: javascript
+category: JS
 ---
 
 index.html
