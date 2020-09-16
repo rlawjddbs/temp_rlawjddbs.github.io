@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 카테고리가 "javascript"인 글 목록
+title: 카테고리가 "JS"인 글 목록
 ---
 <!-- .code is a class with one font-family property. -->
 <section>
-	{% for post in site.categories.javascript %}
+	{% for post in site.categories.JS %}
 		<ul>
 			<li>
 				<div class="post-date code">
