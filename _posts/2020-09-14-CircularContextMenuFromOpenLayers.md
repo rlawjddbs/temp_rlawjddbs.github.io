@@ -66,6 +66,11 @@ category: OpenLayers
 .circular-menu ul{width: 100%; height:100%; margin:0; padding:0; border:2px solid #ffa500; border-radius:50px; box-sizing:border-box; background-color:rgba(255, 255, 255, .23);}
 .circular-menu li{width:20px; height:20px; position:absolute; border-radius:10px; background:#fff; box-sizing:border-box; border:2px solid #ff0000; list-style:none; left:25px; top:25px; cursor:pointer;}
 .circular-menu .localName{position: absolute; padding: 10px 20px; left: 50%; top: -45px; background: #fff; transform: translate3d(-50%, -50%, 0); box-shadow: 0 0 5px rgba(0, 0, 0, .22); border-radius: 0.3em;}
+
+/* ===================================================================================================== */
+/* popup 요소의 콘텐츠를 select(선택) 하려면 .ol-selectable 클래스의 CSS를 Override 한다. 기본값 (auto;) */
+/* ===================================================================================================== */
+/* .ol-selectable { user-select: text; } */
 ```
 - 오픈레이어스 4.6.5 API 예제 중 popup 예제에 나온 스타일을 사용 (`.map`)
    
