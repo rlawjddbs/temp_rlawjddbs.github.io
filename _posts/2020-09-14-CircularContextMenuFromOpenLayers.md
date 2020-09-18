@@ -40,11 +40,12 @@ category: OpenLayers
 <script src="/ol.popup/common/js/Main.js"></script>
 </head>
 <body>
-  <div id="map" class="map"></div>
-  <div id="popup" class="circular-menu" style="">
-    <ul>
-    </ul>        
-  </div>
+    <div id="map" class="map"></div>
+    <div id="popup" class="circular-menu" style="">
+        <p class="localName">지역명</p>
+        <ul>
+        </ul>        
+    </div>
 </body>
 <script type="text/javascript">
     olprj.cmmn.Main();
@@ -57,12 +58,14 @@ category: OpenLayers
 #### style.css
 ```css
 @charset "UTF-8";
-/* map */
-.map { width: 100%; height: 400px; border: 1px solid #ccc; box-sizing:border-box; }
+
+.map {width: 100%; height: 400px; border: 1px solid #ccc; box-sizing:border-box;}
+
 /* contextmenu */
 .circular-menu{position:absolute; width: 70px; height: 70px; z-index:50; transform:translate3d(-50%, -50%, 0);}
 .circular-menu ul{width: 100%; height:100%; margin:0; padding:0; border:2px solid #ffa500; border-radius:50px; box-sizing:border-box; background-color:rgba(255, 255, 255, .23);}
 .circular-menu li{width:20px; height:20px; position:absolute; border-radius:10px; background:#fff; box-sizing:border-box; border:2px solid #ff0000; list-style:none; left:25px; top:25px; cursor:pointer;}
+.circular-menu .localName{position: absolute; padding: 10px 20px; left: 50%; top: -45px; background: #fff; width: 3em; transform: translate3d(-50%, -50%, 0); box-shadow: 0 0 5px rgba(0, 0, 0, .22); border-radius: 0.3em;}
 ```
 - 오픈레이어스 4.6.5 API 예제 중 popup 예제에 나온 스타일을 사용 (`.map`)
    
