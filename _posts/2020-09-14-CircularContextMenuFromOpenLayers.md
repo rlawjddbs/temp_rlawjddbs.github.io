@@ -65,7 +65,7 @@ category: OpenLayers
 .circular-menu{position:absolute; width: 70px; height: 70px; z-index:50; transform:translate3d(-50%, -50%, 0);}
 .circular-menu ul{width: 100%; height:100%; margin:0; padding:0; border:2px solid #ffa500; border-radius:50px; box-sizing:border-box; background-color:rgba(255, 255, 255, .23);}
 .circular-menu li{width:20px; height:20px; position:absolute; border-radius:10px; background:#fff; box-sizing:border-box; border:2px solid #ff0000; list-style:none; left:25px; top:25px; cursor:pointer;}
-.circular-menu .localName{position: absolute; padding: 10px 20px; left: 50%; top: -45px; background: #fff; width: 3em; transform: translate3d(-50%, -50%, 0); box-shadow: 0 0 5px rgba(0, 0, 0, .22); border-radius: 0.3em;}
+.circular-menu .localName{position: absolute; padding: 10px 20px; left: 50%; top: -45px; background: #fff; transform: translate3d(-50%, -50%, 0); box-shadow: 0 0 5px rgba(0, 0, 0, .22); border-radius: 0.3em;}
 ```
 - 오픈레이어스 4.6.5 API 예제 중 popup 예제에 나온 스타일을 사용 (`.map`)
    
@@ -271,19 +271,18 @@ category: OpenLayers
 		}
 		
 		function initEvent() {
-			
 			_self.map.on("click", function(evt){
-				console.log(evt.coordinate); // cordinate : Longitude, Latitude를 배열 형태로 반환
 				if (_self.map.hasFeatureAtPixel(evt.pixel) === true) {
 					_self.map.forEachLayerAtPixel(evt.pixel, function(layer){
 						if(layer.get("title") === "marker") {
-							var lonLat = layer.getSource().getFeatures()[0].getGeometry().getCoordinates();
-							_self.overlay.setPosition(lonLat);
+							_self.content.innerHTML = layer.get("id"); // 지역명 표시
+							var lonLat = layer.getSource().getFeatures()[0].getGeometry().getCoordinates(); // 클릭한 지점의 마커 좌표
+							_self.overlay.setPosition(lonLat); // 팝업 메뉴가 담겨있는 오버레이 레이어 위치 변경
 						} // end if
 					});
 				} else {
 					_self.overlay.setPosition(undefined);
-				} // end else
+				}
 			});
 		} // initEvent
 		
