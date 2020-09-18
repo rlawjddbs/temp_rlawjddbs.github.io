@@ -58,9 +58,8 @@ category: OpenLayers
 #### style.css
 ```css
 @charset "UTF-8";
-
+/* map */
 .map {width: 100%; height: 400px; border: 1px solid #ccc; box-sizing:border-box;}
-
 /* contextmenu */
 .circular-menu{position:absolute; width: 70px; height: 70px; z-index:50; transform:translate3d(-50%, -50%, 0);}
 .circular-menu ul{width: 100%; height:100%; margin:0; padding:0; border:2px solid #ffa500; border-radius:50px; box-sizing:border-box; background-color:rgba(255, 255, 255, .23);}
