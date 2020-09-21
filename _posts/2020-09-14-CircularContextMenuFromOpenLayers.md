@@ -114,10 +114,11 @@ category: OpenLayers
 		function initOverlay(option) {
 			return new ol.Overlay({
 				element : option.container,
-				autoPan : true,
-				autoPanAnimation : {
+				autoPan : true, // 오버레이 팝업 시 자동 맵 이동 활성화
+				autoPanAnimation : { // 맵 이동 지연 시간 (밀리초)
 					duration : 250
-				} // autoPanAnimation
+				}, // autoPanAnimation
+				autoPanMargin : 60 // autoPan-margin 속성 (기본값 20, 수치가 클 수록 팝업 컨테이너 외부로 많이 이동함)
 			}); // Overlay Constructor
 		} // initOverlay
 		
