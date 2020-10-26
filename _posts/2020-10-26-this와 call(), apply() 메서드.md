@@ -75,3 +75,51 @@ window.x = 30
 - 객체가 메서드를 호출할 경우, 메서드를 호출한 객체가 this임
 - 일반 함수인 경우, 브라우저 상에서 window가 this임
 - 이벤트가 발생한 경우, 이벤트를 발생한 객체가 this임
+   
+## call(), apply() 메서드
+메서드를 호춣한 객체, 이벤트가 발생한 객체가 아니면 대부분의 this는 기본 값인 window가 될 것임(DOM에 한해서).
+`call()`, `apply()`메서드는 **this를 조작하는 메서드**로서, 원하는 객체를 this로 할당하고 싶을 때 사용함.
+또한 `Function.prototype`에 정의된 메서드이기 때문에 어떤 함수든 호출이 가능함.
+```js
+someFunction.call("this로 지정할 객체", 인자1, 인자2, ...);
+someFunction.apply("this로 지정할 객체", [배열]);
+```
+`call()`과 `apply()` 메서드의 차이는 위와 같음. 함수를 호출할 때 this를 바꿔주는 기능은 같지만 매개변수로
+인자들을 넘겨주느냐, 배열을 넘겨주느냐의 차이임.   
+   
+```js
+var person = {
+    name: "victolee",
+    email: "asdf@example.com",
+    birth: "0225",
+    foo : function(val1, val2, val3){
+        console.log(val1 + val2 + val3);
+        console.log(this);
+    }
+}
+
+person.foo.call(window, 3,6,9);
+```
+- 위의 예제는 call() 메서드를 사용하여 foo의 this 객체를 person에서 window로 변경함
+- foo() 메서드를 호출하기 위해서는 person 객체에서 호출해야 하므로 원래 this는 person임
+- 그러나 call() 메서드를 호출할 때 첫 번째 인자로 window 객체를 전달 했으므로 this는 window 객체로 변경됨
+   
+```js
+var person = {
+    name: "victolee",
+    email: "asdf@example.com",
+    birth: "0225",
+    foo : function(){
+        sum = arguments[0] + arguments[1] + arguments[2]
+
+        console.log(sum);
+        console.log(this);
+    }
+}
+
+let arr = [3,6,9]
+person.foo.apply(window, arr);
+```
+- 위의 예제는 apply() 함수를 호출하여 this 객체를 person 객체가 아닌 window 객체로 바꾼 코드이며, 설명은 동일함
+
+## when.apply() 는 언제 사용하는가
