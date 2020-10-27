@@ -161,9 +161,9 @@ person.foo.apply(window, arr);
 
     dbs.cmmn = dbs.cmmn || {};
     dbs.cmmn.Util = _class;
-    
 })();
 ```
+   
 - 위 코드는 js(ES5)로 구성한 class 형태의 `Util` 객체
 - 객체 내부에 존재하는 `A`, `B` 필드 변수는 null이며 두 변수를 초기화하는 
 `initA`, `initB` 메서드가 있음
