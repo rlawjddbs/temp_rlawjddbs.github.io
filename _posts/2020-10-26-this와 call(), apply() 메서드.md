@@ -1,7 +1,7 @@
 ---
 title: this와 call(), apply() 메서드
 updated: 2019-10-26 22:27
-category: javascript
+category: JS
 ---
 ### 예제 1
 ```js
@@ -121,5 +121,78 @@ let arr = [3,6,9]
 person.foo.apply(window, arr);
 ```
 - 위의 예제는 apply() 함수를 호출하여 this 객체를 person 객체가 아닌 window 객체로 바꾼 코드이며, 설명은 동일함
+   
+## $.when() 메서드
+- 제이쿼리 `when()`은 1개 이상의 함수를 비동기 방식($.ajax)으로 모두 실행하고 그 후 `done()` 
+메서드를 통해 콜백 처리를 할 수 있음
+- ajax의 결과를 리턴받아 처리하도록 도와줌
+- 즉 `ajax`를 사용하는 경우 발생하는 `Promise` 객체를 처리할 수 도 있음
+```js
+(function(){
+    "use strict";
+    var _class = {
+
+        A : null,
+        B : null,
+
+        initA : function () {
+            var _self = this;
+
+            _self.A = 1;
+        },
+
+        initB : function () {
+            var _self = this;
+
+            _self.B = 2;
+        },
+
+        _whenSample : function () {
+            var _self = this;
+
+            $.when(_self.initA(), _self.initB()).done(function() {
+                console.log(_self.A + _self.B); // 3
+            });
+            
+        }
+
+    }
+
+    dbs.cmmn = dbs.cmmn || {};
+    dbs.cmmn.Util = _class;
+    
+})();
+```
+- 위 코드는 js(ES5)로 구성한 class 형태의 `Util` 객체
+- 객체 내부에 존재하는 `A`, `B` 필드 변수는 null이며 두 변수를 초기화하는 
+`initA`, `initB` 메서드가 있음
+- `_whenSample` 메서드는 제이쿼리의 `when` 메서드를 사용하여 `initA`, `initB` 메서드를 실행하고 두 메서드의 프로세스가 끝나면 
+`done()` 메서드를 통해 초기화 된 `A`와 `B`의 값을 더한 결과를 출력함
+> ### when()의 효용성
+> - 단일한 ajax를 호출하는 경우보다는 여러개의 ajax 콜이 필요한 웹 사이트에서 단계적으로, 또는 동시에 결과를 처리하기 위해서 많이 쓰임
+>   - 순차적으로 ajax 결과에 따라 다른 ajax를 수행하는 경우
+>   - 여러 ajax의 결과가 함께 필요한 경우
+> - when()이 필요한 이유는 ajax는 비동기식 통신이므로 모든 ajax의 처리가 언제될 지 알 수 없기 때문이기도 함
 
 ## when.apply() 는 언제 사용하는가
+위 예제 소스를 통해 알 수 있는 제이쿼리 when() 메서드의 사용법은 다음과 같음
+```js
+$.when(ajax1, ajax2, ...).done(function() {
+    ...
+})
+```
+- 여기서 인자로 사용된 `ajax1`, `ajax2`, ... 등의 arguments를 나열하지 않고 배열에 모아서 처리를 할 수 있는데, 앞서 알아본 `apply()` 함수를 사용하면 가능함
+   
+```js
+var deferreds = []; // 1
+// var deferreds = [ajax1, ajax2];
+deferreds.push(ajax1); // 2
+deferreds.push(ajax2);
+
+$.when.apply(null, deferreds).done(function() { // 3
+    ...
+})
+```
+1. ajax 비동기 통신 함수를 모아놓을 배열 `deferreds`를 선언함
+2. deferreds 배열에 함수를 push 함
+3. $.when 메서드 뒤에 apply 함수를 붙여 인자를 배열로 처리
