@@ -126,7 +126,8 @@ person.foo.apply(window, arr);
 - 제이쿼리 `when()`은 1개 이상의 함수를 비동기 방식($.ajax)으로 모두 실행하고 그 후 `done()` 
 메서드를 통해 콜백 처리를 할 수 있음
 - ajax의 결과를 리턴받아 처리하도록 도와줌
-- 즉 `ajax`를 사용하는 경우 발생하는 `Promise` 객체를 처리할 수 도 있음
+- 즉 `ajax`를 사용하는 경우 발생하는 `Promise` 객체를 처리할 수 도 있음   
+   
 ```js
 (function(){
     "use strict";
