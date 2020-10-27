@@ -216,7 +216,7 @@ function ajax2() {
     return deferred.promise();
 }
 
-$.when.apply(null, deferreds).done(function(r1, r2) { // 3
+$.when.apply(null, deferreds).done(function(r1, r2) {
     ...
 })
 ```
