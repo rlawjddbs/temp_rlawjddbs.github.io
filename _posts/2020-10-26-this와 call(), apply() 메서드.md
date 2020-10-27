@@ -174,7 +174,7 @@ person.foo.apply(window, arr);
 >   - 여러 ajax의 결과가 함께 필요한 경우
 > - when()이 필요한 이유는 ajax는 비동기식 통신이므로 모든 ajax의 처리가 언제될 지 알 수 없기 때문이기도 함
 
-## when.apply() 는 언제 사용하는가
+## when.apply()
 위 예제 소스를 통해 알 수 있는 제이쿼리 when() 메서드의 사용법은 다음과 같음
 ```js
 $.when(ajax1, ajax2, ...).done(function() {
@@ -196,3 +196,26 @@ $.when.apply(null, deferreds).done(function() { // 3
 1. ajax 비동기 통신 함수를 모아놓을 배열 `deferreds`를 선언함
 2. deferreds 배열에 함수를 push 함
 3. $.when 메서드 뒤에 apply 함수를 붙여 인자를 배열로 처리
+   
+### when.apply()로 결과 받기
+```js
+function ajax1() {
+    var deferred = $.Deferred();
+
+    // ajax1의 비동기 통신 프로세스...
+    
+    return deferred.promise();
+}
+
+function ajax2() {
+    var deferred = $.Deferred();
+
+    // ajax1의 비동기 통신 프로세스...
+    
+    return deferred.promise();
+}
+
+$.when.apply(null, deferreds).done(function(r1, r2) { // 3
+    ...
+})
+```
