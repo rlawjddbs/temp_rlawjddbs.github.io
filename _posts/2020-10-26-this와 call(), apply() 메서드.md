@@ -211,7 +211,7 @@ function ajax1() {
 function ajax2() {
     var deferred = $.Deferred();
 
-    // ajax1의 비동기 통신 프로세스...
+    // ajax2의 비동기 통신 프로세스...
     
     return deferred.promise();
 }
