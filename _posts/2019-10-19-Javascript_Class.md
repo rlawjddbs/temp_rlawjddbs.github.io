@@ -112,6 +112,17 @@ Main.js
 (function() {
     "use strict";
     var _class = function() { // function style
+
+        // ---------------------
+        // Outter Function
+        // ---------------------
+        function outterFunction() {
+            ...
+        }
+
+        // ---------------------
+        // Innter Function
+        // ---------------------
         let initialize = function() { // 내부 함수 선언 방식1
             var _self = this;
 
@@ -123,6 +134,13 @@ Main.js
             return key != undefined && key != null && key != "" ? key : defaultValue;
         }
 
+        initialize();
+
+        // ---------------------
+        // Outter
+        // ---------------------
+        this.outterFunction = outterFunction; // 이 방식은 인스턴스를 생성해야 유효한 위치에 등록됨
+
         ...
     } // class
 
@@ -131,3 +149,6 @@ Main.js
 
 })();
 ```
+- 함수 방식으로 1회성으로 사용할 목적으로 클래스를 만들어 호출할 수 있음
+- `외부 함수` 등록 시 반드시 해당 클래스의 `인스턴스`를 만들어야 올바르게 접근 가능
+    - `인스턴스` 없이 `dbs.cmmn.Main()`을 호출할 경우 `dbs.cmmn.outterFunction()` 으로 외부 함수 위치가 알맞지 않은 구조...에 위치한 것을 확인할 수 있음

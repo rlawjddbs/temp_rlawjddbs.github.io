@@ -14,7 +14,7 @@ category: Java
 |Method 메타 데이터|저장|저장|
 |Static Object 변수, 상수|저장|Heap 영역으로 이동|
 |메모리 튜닝|Heap, Perm 영역 튜닝|Heap 튜닝, Native 영역은 OS가 동적 조정|
-|메모리 옵션|`-XX:PermSize`  `-XX:MaxPermSize`|`-XX:MetaspaceSize`  `-XX:MaxMetaspaceSize`|
+|메모리 옵션|`-XX:PermSize`<br />`-XX:MaxPermSize`|`-XX:MetaspaceSize`<br />`-XX:MaxMetaspaceSize`|
 
     
 Java 7 까지의 HotSpot[^1] 구조
