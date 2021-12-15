@@ -8,9 +8,16 @@ category: Java
 
 > Perm 영역은 보통 **`Class`의 Meta 정보**나 **`Method`의 Meta 정보**, **`Static` 변수와 `상수` 정보**들이 **저장되는 공간**으로 흔히 `메타데이터 저장 영역`이라고도 한다. 이 영역은 Java 8 부터는 `Native` 영역으로 이동하여 `Metaspace` 영역으로 변경되었다. (다만, 기존 Perm 영역에 존재하던 `Static Object`는 Heap 영역으로 옮겨져서 `GC`의 대상이 최대한 될 수 있도록 하였다)
 
+| |Java 7|Java 8|
+|------|---|---|
+|Class 메타 데이터|저장|저장|
+|Method 메타 데이터|저장|저장|
+|Static Object 변수, 상수|저장|Heap 영역으로 이동|
+|메모리 튜닝|Heap, Perm 영역 튜닝|Heap 튜닝, Native 영역은 OS가 동적 조정|
+|메모리 옵션|`-XX:PermSize`  `-XX:MaxPermSize`|`-XX:MetaspaceSize`  `-XX:MaxMetaspaceSize`|
 
     
-Java 7 까지의 HotSpot([^1]) 구조
+Java 7 까지의 HotSpot[^1] 구조
 ```shell
 <----- Java Heap ----->             <--- Native Memory --->
 +------+----+----+-----+-----------+--------+--------------+
