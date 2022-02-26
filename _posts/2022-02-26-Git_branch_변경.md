@@ -1,7 +1,7 @@
 ---
 title: Git branch 변경
 updated: 2022-02-26 17:54
-category: linux
+category: Linux
 ---
 
 [출처 - HAHWUL님 블로그](https://www.hahwul.com/2021/07/17/changing-the-github-default-branch/)
