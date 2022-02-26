@@ -1,5 +1,5 @@
 ---
-title: Homebrew 기본 명령어
+title: Git branch 변경
 updated: 2022-02-26 17:54
 category: linux
 ---
